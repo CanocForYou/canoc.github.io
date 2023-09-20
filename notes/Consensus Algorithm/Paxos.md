@@ -157,14 +157,14 @@ P2^c^的意义在于，将提出满足P2^b^的proposal的方式明确，即propo
 1. proposer选定一个序列号n，并向系统内的acceptor发送准备请求，称为 *prepare(n)*
 2. acceptor收到 *prepare(n)* 后，会拒绝低于其响应的最大序列号last-n的请求，接受大于等于last-n的请求；返回acceptor接受的n最大的proposal（如果有），并更新last-n
 
-![paxos-stage-perpare](https://raw.githubusercontent.com/CanocForYou/canoc.github.io/main/images/paxos-stage-perpare.png)
+![paxos-stage-perpare](https://github.com/CanocForYou/keep-learning/blob/main/images/paxos-stage-perpare.png?raw=true)
 
 ##### Phase 2 （accept）
 
 1. 当proposer接收到了大多数acceptor对 *prepare(n)* 的响应，那么其会向系统内acceptor发送写请求，称为 *accpet(n, v)*，n是其序列号，v是其接收到的响应中（如果有），n最大的proposal的值，或者自己定义的v（如果没有）；否则终止。当大多数 *accpet(n, v)* 被接收后，写入成功
 2. acceptor收到 *accpet(n, v)* 后，会拒绝低于其响应的最大序列号last-n；接受大于等于last-n的请求，并更新last-n
 
-![paxos-stage-accept](https://github.com/CanocForYou/canoc.github.io/blob/main/images/paxos-stage-accept.png?raw=true)
+![paxos-stage-accept](https://github.com/CanocForYou/keep-learning/blob/main/images/paxos-stage-accept.png?raw=true)
 
 ##### proposer问题
 

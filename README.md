@@ -1,1 +1,1 @@
-[Paxos Made Simple 论文阅读](https://canocforyou.github.io/canoc.github.io/notes/Consensus%20Algorithm/Paxos)
+[Paxos Made Simple 论文阅读](https://canocforyou.github.io/keep-learning/notes/Consensus%20Algorithm/Paxos)
